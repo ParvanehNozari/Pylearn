@@ -7,7 +7,7 @@ while factorial<a:
     factorial = factorial*i
         
 if factorial == a:
-        print("Yes")
+    print("Yes")
 else:
-        print("No") 
+    print("No") 
 

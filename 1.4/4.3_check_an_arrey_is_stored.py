@@ -1,24 +1,22 @@
-def is_sorted(arr):
-   
-    return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
+array_input= int(input("Enter array: "))
+if array_input<= 0:
+    print("please enter positive number: ")
+else:
+    array=[]
+    for i in range(array_input):
+        element = int(input("Enter the array elements: "))
+        array.append(element)
+def is_sorted(array):
+    sorted = True
+    for i in range(1,len(array)):
+        if array[i] < array [i -1]:
+            sorted = False
+            break
+    return sorted
+    
+if is_sorted(array):
+    print("array is sorted.")
+else:
+    print("array is not sorted.")
 
 
-try:
-    n = int(input("Enter n: "))
-    if n <= 0:
-        print("Please enter a positive integer for the length.")
-    else:
-      
-        print("Enter the array elements:")
-        arr = []
-        for _ in range(n):
-            element = int(input())
-            arr.append(element)
-        
-       
-        if is_sorted(arr):
-            print("The array is sorted.")
-        else:
-            print("The array is not sorted.")
-except ValueError:
-    print("Please enter valid integers.")

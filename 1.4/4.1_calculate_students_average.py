@@ -1,22 +1,19 @@
-def calculate_average_gpa():
-    grades = []
+def main():
+    total=0
+    numbers=[]
     
     while True:
-        user_input = input("Enter grade (or type 'exit' to finish): ")
-        
-        if user_input.lower() == 'exit':
+        user_input = (input("print: "))
+        if user_input == "exit":
             break
-        
-        try:
-            grade = float(user_input)
-            grades.append(grade)
-        except ValueError:
-            print("Please enter a valid number for the grade.")
+        elif user_input.isdigit():
+            number = float(user_input)
+            numbers.append(number)
+            total += number
+        else:
+            print(" adad e motabar vared konid")
+    print("list e aadad: ", numbers)
+    print("majmue nahayi: ", total)
+    print("finish")
     
-    if grades:
-        average_gpa = sum(grades) / len(grades)
-        print(f"The average GPA is: {average_gpa:.2f}")
-    else:
-        print("No grades were entered.")
-
-calculate_average_gpa()
+print(main())
